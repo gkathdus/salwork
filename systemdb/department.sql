@@ -10,6 +10,8 @@ INSERT INTO department(deptid, deptname, location)
 VALUES (10, '전산팀', '서울');
 INSERT INTO department(deptid, deptname, location)
 VALUES (20, '관리팀', '인천');
+INSERT INTO department(deptid, deptname, location)
+VALUES (30, '마케팅팀', '수원');
 
 -- 자료 검색(특정 칼럼 검색)
 SELECT deptid, deptname, location FROM department;
@@ -27,6 +29,10 @@ UPDATE department SET deptname = '경영팀'
 WHERE deptid = 20;
 
 ROLLBACK; -- commit 이전에 실행하면 취소됨
+
+-- 자료 삭제(부서 번호가 30번인 마케팅팀 삭제)
+DELETE FROM department
+WHERE deptid = 30;
 
 COMMIT;
 

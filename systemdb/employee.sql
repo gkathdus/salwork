@@ -36,6 +36,10 @@ WHERE age > 30;
 SELECT * FROM employee
 WHERE age IS NULL;
 
+-- 문자열 검색(사원 이름에서 소를 포함하거나 또는 나이가 저장되지 않은 사원 검색)
+SELECT * FROM employee
+WHERE empname LIKE '%소%' OR age IS NULL;
+
 -- 부서 번호가 20인 사원 검색
 SELECT * FROM employee
 WHERE deptid = 20;
